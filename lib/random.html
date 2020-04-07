@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рандом</title>
+</head>
+<body>
+    <script>
+        function RandomFor100(input,randomNumber)
+        {
+            if (randomNumber==null)
+            randomNumber=Math.round(Math.random() * 100) ;
+            console.log("Не подглядывать! "+ randomNumber);
+            
+            if (isNaN(Number(input)))
+            {
+                alert("Введите число");
+                RandomFor100(prompt(),randomNumber);
+            }
+            else if (Number(input)>randomNumber)
+            {
+                alert("Загаданное число меньше");
+                RandomFor100(prompt(),randomNumber);
+            }
+            else if (Number(input)<randomNumber)
+            {
+                alert("Загаданное число больше"); 
+                RandomFor100(prompt(),randomNumber); 
+            }
+            else if (Number(input)==randomNumber)
+            {
+                alert("Вы угадали!");  
+            }
+        
+                
+            
+
+
+        }
+RandomFor100(prompt(),null);
+    </script>
+</body>
+</html>
